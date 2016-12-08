@@ -8,17 +8,5 @@ module.exports = function(defaults) {
         // Add options here
     });
 
-    function MyFilter(inputNode) { Filter.call(this, inputNode); }
-    MyFilter.prototype = Object.create(Filter.prototype);
-    MyFilter.prototype.processString = function(existingString) {
-        return `/**
-            * vendor.js
-            *
-            * (c) 2016 🦄🦄🦄🔫🌈🍺🍺 All Rights Reserved * generated at: ${new Date()} **/
-            ${existingString}`;
-    };
-    MyFilter.prototype.extensions = ['js'];
-    MyFilter.prototype.targetExtension = 'js';
-
-    return new MyFilter(app.toTree());
+    return app.toTree();
 };
