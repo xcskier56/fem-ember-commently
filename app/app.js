@@ -1,3 +1,5 @@
+/*jshint node:true*/
+/* global define */
 import Ember from 'ember';
 import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
@@ -20,7 +22,7 @@ define('math', [], function() {
   return {
     PI: Math.PI,
     default: Math
-  }
+  };
 });
 
 define('math-2', [], function() {
@@ -32,7 +34,7 @@ define('math-2', [], function() {
     default: function() {
       return Math;
     }
-  }
+  };
 });
 
 
