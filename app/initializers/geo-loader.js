@@ -1,7 +1,5 @@
 export function initialize(application) {
-    console.log('fastboot')
     if (typeof(FastBoot) === 'undefined') {
-      console.log('not fastboot');
       application.deferReadiness();
       const geo = navigator.geolocation;
       geo.getCurrentPosition((pos) => {
